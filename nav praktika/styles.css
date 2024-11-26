@@ -1,0 +1,26 @@
+head { 
+    display:none
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+}
+.logo {
+    display:flex;
+    align-items: center;
+}
+
+.link:hover {
+    color:orange
+    text-decoration underline; 
+}
+
+.navigacija {
+    display:flex;
+    height: 100px;
+    -ms-flex-align: center;
+}
