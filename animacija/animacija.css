@@ -10,9 +10,20 @@
     background-color: red;
     border-radius: 50%;
     position: relative;
-    animation: move 2s infinite;
+    /* animation: move 2s infinite; */
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position:relative;
+    animation: move2 2s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
 @keyframes move {
     0% {
         left:0;
@@ -22,5 +33,14 @@
     }
     100% {
         left:0;
+    }
+}
+
+@keyframes move2 {
+    from {
+        left: 0 
+    }
+    to {
+        left: 200px
     }
 }
