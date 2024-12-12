@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 120px 1fr 120px;
+    grid-template-columns: 200px 1fr 1fr;
+    min-height: 100vh;
+    grid-template-areas:
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+    /* gap: 16px; atitraukia vienodai tiek eilutes tiek stulpelius
+    row-gap: 24px; tarpas tarp eiluciu
+    column-gap: 50px; tarpas tarp stulpeliu */
+    gap: 16px;
+}
+
+header {
+    background-color: aquamarine;
+    grid-area: header;
+}
+main {
+    background-color: bisque;
+    grid-area: main;
+}
+aside {
+    background-color: blue;
+    grid-area:aside;
+}
+
+footer {
+    background-color: blueviolet;
+    grid-area: footer;
+}
+
+@media (max-width: 769px) {
+    body {
+        grid-template-rows: 120px 100px 1fr 120px;
+        grid-template-areas:
+        "header header header"
+        "aside aside aside"
+        "main main main" 
+        "footer footer footer"; 
+    }
+    header {
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 1200px) {
+    footer {
+        background-color: yellow;
+    }
+}
+
+@media (max-width: 742px) {
+    main {
+        background-color: pink;
+    }
+}
